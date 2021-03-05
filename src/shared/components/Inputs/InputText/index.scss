@@ -1,0 +1,7 @@
+@import 'shared/assets/styles/main.scss';
+
+.input-text {
+    & label {
+        @include flex($dr: c);
+    }
+}

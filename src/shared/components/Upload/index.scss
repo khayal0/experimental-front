@@ -1,0 +1,80 @@
+@import 'shared/assets/styles/main.scss';
+
+.upload {
+    &__preview {
+        @include el($w: 9.5rem, $h: 9.5rem, $mb: 1rem);
+        position: relative;
+        &__image {
+            @include el($radius: 0.7rem);
+            object-fit: cover;
+            position: absolute;
+        }
+    }
+
+    //FIXME: modals close-btn code dublicate, consider adding types to Button
+    .close-btn {
+        @include el($h: rem(29px), $crs: pointer, $bg: #dfdeff, $p: 0.13rem 0.3rem, $b: none, $radius: 0.25rem);
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        transition: all 0.25s;
+
+        &:hover {
+            @include el($bg: #bea5f3, $color: rgb(255, 245, 220));
+        }
+    }
+    &__dropzone {
+        @include el($w: 30rem, $h: 12rem, $mb: 2rem, $b: 0.16rem dashed #f5ac84, $radius: 0.2rem);
+        @include flex($jc: c, $ai: c);
+        &--hover {
+            @include el($b: 0.35rem dashed #ff7e06);
+        }
+        &__icon {
+            @include flex($dr: c, $ai: c);
+            span {
+                @include el($mt: 2rem);
+                @include text($color: #555, $size: 1rem !important);
+            }
+        }
+    }
+    // hide default input file upload
+    & > input {
+        @include el($dsp: none);
+    }
+    .progress {
+        @include el($w: rem(130px), $h: rem(23px), $radius: rem(90px), $bg: #ffffffd8, $overflow: hidden);
+        position: relative;
+        top: rem(65px);
+        left: rem(15px);
+        animation: hide 1s normal forwards;
+    }
+
+    .progress-value {
+        @include el($w: rem(130px), $h: rem(23px));
+        // it makes own path using shadow
+        // box-shadow: 0 10px 100px 110px #fff;
+        background: linear-gradient(3deg, rgba(0, 0, 4, 0.8) 20%, rgb(143, 128, 128) 100%);
+        animation: load 1s normal forwards;
+    }
+
+    @keyframes load {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+
+    @keyframes hide {
+        0% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+}

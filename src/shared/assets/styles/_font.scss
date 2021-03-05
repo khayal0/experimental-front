@@ -1,0 +1,27 @@
+// @font-face {
+//     font-family: 'TT_Interphases_Bold';
+//     src: url('../fonts/TTInterphases-Bold.eot');
+//     src: url('../fonts/TTInterphases-Bold.eot') format('embedded-opentype'),
+//         url('../fonts/TTInterphases-Bold.woff2') format('woff2'), url('../fonts/TTInterphases-Bold.woff') format('woff'),
+//         url('../fonts/TTInterphases-Bold.ttf') format('truetype'),
+//         url('../fonts/TTInterphases-Bold.svg#TTInterphases-Bold') format('svg');
+//     font-weight: bold;
+//     font-style: normal;
+// }
+
+/* poppins-300 - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Poppins Light'), local('Poppins-Light'), url('./fonts/poppins-latin-300.woff2') format('woff2');
+    font-display: swap;
+}
+/* poppins-500 - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Poppins Medium'), local('Poppins-Medium'), url('./fonts/poppins-latin-500.woff2') format('woff2');
+    font-display: swap;
+}

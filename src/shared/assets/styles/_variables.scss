@@ -1,0 +1,25 @@
+$baseSizePixel: 16px;
+
+/** COLORS */
+$white: #fff;
+$pomegranate: #ed3330;
+$gray: #dcdcdc;
+$purple: #5e27f594;
+/* media */
+// $extra-small: 435px;
+// $small: 576px;
+// $medium: 768px;
+// $large: 992px;
+// $extra-large: 1200px;
+
+/* LAYOUT */
+$lightBorder: #eaeaea;
+
+/* MODAL */
+//FIXME: BackgroundColorModal , move Modal word to end
+$modalBackgroundColor: rgba(241, 227, 227, 0.795);
+$modalContentColor: $white;
+$modalTitleBorder: rgb(243, 235, 235);
+$modalCloseBtnColor: rgb(219, 214, 214);
+$modalCloseBtnColorHover: $pomegranate;
+$modalCloseBtnBg: #f3f6f9;

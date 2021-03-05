@@ -1,0 +1,46 @@
+// @import 'shared/assets/styles/main.scss';
+// .image-upload {
+//     @include text($font: Poppins, $weight: 300);
+//     @include flex($jc: sa);
+//     @include el($w: 100%, $mt: 1rem);
+//     &__done-button {
+//         @include el($p: 1rem, $radius: rem(2px), $b: none, $bg: $sbActive);
+//         @include text($font: Poppins, $color: $white);
+//         position: absolute;
+//         bottom: 3rem;
+//         right: 4rem;
+//         &:hover {
+//             @include el($bg: #434343, $crs: pointer);
+//             transition: all 0.4s ease 0s;
+//         }
+//     }
+//     // &__dropbox {
+//     //     @include el($w: 40%);
+//     // }
+//     &__information {
+//         &--textarea {
+//             @include el($b: rem(1px) solid $gray, $mb: 1rem, $mt: 0.6rem, $p: 1rem);
+//             &::placeholder {
+//                 opacity: 0.3;
+//             }
+//         }
+//         &__prices {
+//             @include flex($jc: fs);
+//         }
+//         &--price {
+//             @include el($w-max: 6rem, $mr: 1rem);
+//         }
+//     }
+//     input {
+//         @include el($b: rem(1px) solid $gray, $mb: 1.5rem, $mt: 0.6rem);
+//         &::placeholder {
+//             opacity: 0.3;
+//         }
+//     }
+
+//     span {
+//         @include text($size: 1rem, $color: rgb(61, 61, 61));
+//         opacity: 0.75;
+//         font-weight: 500;
+//     }
+// }
