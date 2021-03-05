@@ -4,4 +4,11 @@
     & label {
         @include flex($dr: c);
     }
+    & input::placeholder {
+        color: #999999;
+    }
+
+    & input::selection {
+        background: $emerland;
+    }
 }

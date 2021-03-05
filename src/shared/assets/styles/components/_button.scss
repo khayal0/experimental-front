@@ -3,4 +3,68 @@ button {
     margin: 0;
     border: none;
     outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$dotsWidth: 0.3rem;
+$dotsHeight: 0.3rem;
+$dotsRadius: 0.5rem;
+$dotsBackground: #414142;
+$dotsColor: #ecebeb;
+$dotsMargin: 0.45rem;
+$animationSpeed: 1s;
+
+.dot-flashing {
+    position: relative;
+    width: $dotsWidth;
+    height: $dotsHeight;
+    border-radius: $dotsRadius;
+    background-color: $dotsBackground;
+    color: $dotsColor;
+    animation: dotFlashing $animationSpeed infinite linear alternate;
+    animation-delay: 0.8s;
+}
+
+.dot-flashing::before,
+.dot-flashing::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+
+.dot-flashing::before {
+    left: -$dotsMargin;
+    width: $dotsWidth;
+    height: $dotsHeight;
+    border-radius: $dotsRadius;
+    background-color: $dotsBackground;
+    color: $dotsColor;
+    animation: dotFlashing $animationSpeed infinite alternate;
+    animation-delay: 0s;
+}
+
+.dot-flashing::after {
+    left: $dotsMargin;
+    width: $dotsWidth;
+    height: $dotsHeight;
+    border-radius: $dotsRadius;
+    background-color: $dotsBackground;
+    color: $dotsColor;
+    animation: dotFlashing $animationSpeed infinite alternate;
+    animation-delay: 1.1s;
+}
+
+@keyframes dotFlashing {
+    0% {
+        background-color: #414142;
+    }
+    50% {
+        background-color: #a8a7a7;
+    }
+    100% {
+        background-color: $dotsColor;
+    }
 }

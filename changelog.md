@@ -1,3 +1,9 @@
+Added:
+1.components
+2.loader for button and selection for input text
+
+Need to consider:
+
 1. write utils a method isEmpty --> <anArray.isEmpty()> and <anArray.delete()>
 2. Redux should have selects and reselect lib
 3. Redux state normalizing and Pure Components for optimization

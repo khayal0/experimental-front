@@ -1,6 +1,18 @@
 input {
-    background: 0.08rem solid #dcdcdc;
+    display: block;
+    background-color: transparent;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    color: #000;
+    font-size: 14px;
+    width: 100%;
     padding: 0.8rem;
-    font-size: 0.8rem;
-    font-family: Poppins;
+    height: 40px;
+    font-family: Inter;
+    font-weight: 500;
+    box-shadow: none;
+    text-align: center;
+    &:focus {
+        border: 1px solid #25292e;
+    }
 }

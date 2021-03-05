@@ -12,12 +12,23 @@
         margin: rem(10px) 0px;
         width: rem(260px);
         height: rem(40px);
-        background-color: $black;
+        background: $black;
         border: 1px solid $black;
-        border-radius: 5px;
+        border-radius: rem(5px);
         transition: all 0.2s ease 0s;
         font-weight: 600;
         font-size: 0.9rem;
         font-family: inherit;
+        &:hover {
+            background: $white;
+            color: $black;
+        }
+        &--loading {
+            background: $white;
+        }
+    }
+
+    input:last-child {
+        margin: rem(4px) 0px;
     }
 }

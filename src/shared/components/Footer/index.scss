@@ -2,7 +2,6 @@
 
 .footer {
     border-top: 1px solid $lightBorder;
-    color: $white;
-    @include el($w: inherit, $h: 100px, $p: 2rem);
+    @include el($w: inherit, $h: 50px, $p: 2rem);
     @include flex($ai: c, $jc: c);
 }

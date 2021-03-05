@@ -14,12 +14,21 @@ interface IProps extends HTMLAttributes<HTMLElement> {
     id?: string;
     children?: ReactNode | string;
     disabled?: boolean;
+    loading?: boolean;
 }
 
-const Button: FC<IProps> = ({ type = EButtonType.BUTTON, disabled = false, children, className, ...others }) => {
+const Button: FC<IProps> = ({
+    type = EButtonType.BUTTON,
+    disabled = false,
+    loading,
+    children,
+    className,
+    ...others
+}) => {
+    disabled = loading ? true : disabled;
     return (
-        <button {...{ type, disabled, ...others }} className={className}>
-            {children}
+        <button {...{ ...others }} className={`${className} ${loading ? className + '--loading' : ''}`}>
+            {loading ? <div className="dot-flashing"></div> : children}
         </button>
     );
 };

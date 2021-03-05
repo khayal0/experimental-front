@@ -9,9 +9,10 @@ interface IProps {
     name?: string;
     type: 'text' | 'number' | 'textarea';
     placeholder?: string;
+    spellCheck?: boolean;
 }
 
-const InputText: FC<IProps> = ({ className, label, name, onChange, type, placeholder }) => {
+const InputText: FC<IProps> = ({ className, label, name, onChange, type, placeholder, spellCheck = false }) => {
     const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
         onChange({ name: e.currentTarget.name, value: e.currentTarget.value });
     };
@@ -19,7 +20,13 @@ const InputText: FC<IProps> = ({ className, label, name, onChange, type, placeho
         <Block className={`input-text  ${className ? className : ''}`}>
             <label>
                 {label && <span>{label}</span>}
-                <input type={type} onChange={handleInput} name={name} placeholder={placeholder} />
+                <input
+                    type={type}
+                    onChange={handleInput}
+                    name={name}
+                    placeholder={placeholder}
+                    spellCheck={spellCheck}
+                />
             </label>
         </Block>
     );
