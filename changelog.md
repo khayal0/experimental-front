@@ -4,3 +4,6 @@
 4. Concurrent Mode
 5. write one handle function
 6. upload progress with saga or thunk, proper error handling is needed
+7. npm run build bug
+8. delete Poppins fonts
+9. test on IOS/MAC/ANDROID/WINDOWS and browsers

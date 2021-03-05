@@ -18,7 +18,7 @@ const InputText: FC<IProps> = ({ className, label, name, onChange, type, placeho
     return (
         <Block className={`input-text  ${className ? className : ''}`}>
             <label>
-                <span>{label || 'Input text: '}</span>
+                {label && <span>{label}</span>}
                 <input type={type} onChange={handleInput} name={name} placeholder={placeholder} />
             </label>
         </Block>

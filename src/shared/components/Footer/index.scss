@@ -1,7 +1,7 @@
 @import 'shared/assets/styles/main.scss';
 
 .footer {
-    border-top: 1px solid red;
+    border-top: 1px solid $lightBorder;
     color: $white;
     @include el($w: inherit, $h: 100px, $p: 2rem);
     @include flex($ai: c, $jc: c);
