@@ -1,0 +1,45 @@
+@import 'shared/assets/styles/main.scss';
+
+.login-page-container {
+    width: inherit;
+    @include flex($dr: c, $jc: sb, $ai: c);
+}
+.login-page {
+    font-family: 'Inter', sans-serif;
+    &__inputs-wrapper {
+        max-width: rem(260px);
+        margin: 0 auto;
+        margin-top: rem(24px);
+    }
+    &__title {
+        font-size: rem(48px);
+        font-weight: 800;
+        // span:last-child {
+        //     // color: #44c1f7;
+        // }
+    }
+    &__continue {
+        color: $white;
+        margin: rem(10px) 0px;
+        height: rem(40px);
+        width: 100%;
+        background: $black;
+        border: 1px solid $black;
+        border-radius: rem(5px);
+        transition: all 0.2s ease 0s;
+        font-weight: 600;
+        font-size: 0.9rem;
+        font-family: inherit;
+        &:hover {
+            background: $white;
+            color: $black;
+        }
+        &--loading {
+            background: $white;
+        }
+    }
+
+    input:last-child {
+        margin: rem(4px) 0px;
+    }
+}

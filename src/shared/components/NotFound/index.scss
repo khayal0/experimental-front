@@ -1,0 +1,23 @@
+@import 'shared/assets/styles/main.scss';
+
+.page-not-found {
+    @include flex($jc: c, $ai: c, $dr: c);
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 3.5rem;
+    button {
+        color: $white;
+        margin: rem(30px) 0px;
+        background: $white;
+        border: 1px solid $black;
+        border-radius: rem(5px);
+        transition: all 0.2s ease 0s;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    a {
+        height: rem(40px);
+        width: 200px;
+        @include flex($jc: c, $ai: c);
+    }
+}

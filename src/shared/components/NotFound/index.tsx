@@ -1,10 +1,19 @@
 import React, { FC } from 'react';
+import { Link } from 'react-router-dom';
+import Button from 'shared/components/Button';
 import './index.scss';
 
 interface IProps {}
 
 const NotFoundPage: FC<IProps> = () => {
-    return <div>this is not found page - 404</div>;
+    return (
+        <div className="page-not-found">
+            <span>Page Not Found</span>
+            <Button>
+                <Link to="/">Go Back to Home</Link>
+            </Button>
+        </div>
+    );
 };
 
 export default NotFoundPage;

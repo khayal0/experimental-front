@@ -26,6 +26,7 @@ const Button: FC<IProps> = ({
     ...others
 }) => {
     disabled = loading ? true : disabled;
+    className = className || 'button-lib';
     return (
         <button {...{ ...others }} className={`${className} ${loading ? className + '--loading' : ''}`}>
             {loading ? <div className="dot-flashing"></div> : children}
