@@ -16,11 +16,17 @@ const LoginPage = () => {
         <Block className="login-page-container">
             <div className="ghost-element"></div>
             <Block className="login-page">
-                <InputText onChange={value => console.log(value)} type="text" placeholder="you@domain.com" />
-                <InputText onChange={value => console.log(value)} type="text" />
-                <Button loading={loading} onClick={handleContinue} className="login-page__continue">
-                    Continue
-                </Button>
+                <Block className="login-page__title">
+                    <span>Log in to </span>
+                    <span>E.B.Solutions</span>
+                </Block>
+                <Block className="login-page__inputs-wrapper">
+                    <InputText onChange={value => console.log(value)} type="text" placeholder="you@domain.com" />
+                    <InputText onChange={value => console.log(value)} type="text" placeholder="password" />
+                    <Button loading={loading} onClick={handleContinue} className="login-page__continue">
+                        Continue
+                    </Button>
+                </Block>
             </Block>
             <Footer />
         </Block>

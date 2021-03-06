@@ -6,12 +6,25 @@
 }
 .login-page {
     font-family: 'Inter', sans-serif;
-
+    &__inputs-wrapper {
+        max-width: rem(260px);
+        margin: 0 auto;
+        margin-top: rem(24px);
+    }
+    &__title {
+        font-size: rem(48px);
+        font-weight: 800;
+        span:last-child {
+            color: #44c1f7;
+            font-size: 40px;
+            font-family: Poppins;
+        }
+    }
     &__continue {
         color: $white;
         margin: rem(10px) 0px;
-        width: rem(260px);
         height: rem(40px);
+        width: 100%;
         background: $black;
         border: 1px solid $black;
         border-radius: rem(5px);
