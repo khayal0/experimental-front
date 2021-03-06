@@ -37,9 +37,9 @@ const UsersTable: FC<any> = ({ users, userSelected, usersDataRequested }) => {
     );
     const body = users.allIds.map((id: string) => {
         const { name, date, email, phone, status, totaltasks } = users.byId[id];
-        // console.log(totaltasks);
         //prettier-ignore
-        return ( <div className="row" key={id} onClick={() => handleRowClick(id)}>
+        return ( 
+    <div className="row" key={id} onClick={() => handleRowClick(id)}>
     <div className="cell" data-title={headersData[0]}>{name}</div>
     <div className="cell" data-title={headersData[1]}>{date}</div>
     <div className="cell" data-title={headersData[2]}>{email}</div>
@@ -47,7 +47,7 @@ const UsersTable: FC<any> = ({ users, userSelected, usersDataRequested }) => {
     <div className="cell" data-title={headersData[4]}>
         <button className={status}>{status}</button></div>
     <div className="cell" data-title={headersData[5]}>{totaltasks}</div>
-  </div>);
+     </div>);
     });
     return <GridTable {...{ body, headers, columnSize }} />;
 };
