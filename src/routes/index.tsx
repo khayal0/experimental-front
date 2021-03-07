@@ -12,9 +12,9 @@ const NotFound = lazy(() => import('shared/components/NotFound'));
 export const CenterRoutes: JSX.Element = (
     <Suspense fallback={<Loader />}>
         <Routes>
-            <Navigate to={PATHS.LOGIN} />
+            <Navigate to={PATHS.INSERTDATA} />
             <Route path={PATHS.LOGIN} element={<LoginPage />} />
-            <Route path={PATHS.INSERTINFORMATION} element={<InsertDataPage />} />
+            <Route path={PATHS.INSERTDATA} element={<InsertDataPage />} />
             <Route path={PATHS.DASHBOARD} element={<Loader />} />
             <Route path={PATHS.USERTABLE} element={<UsersTable />} />
             <Route path={PATHS.UPLOAD} element={<ImageUpload />} />

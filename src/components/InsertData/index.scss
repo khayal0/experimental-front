@@ -1,19 +1,24 @@
 @import 'shared/assets/styles/main.scss';
 
-.login-page-container {
+.insert-data-container {
     width: inherit;
     @include flex($dr: c, $jc: sb, $ai: c);
 }
-.login-page {
+.insert-data {
     font-family: 'Inter', sans-serif;
+
     &__inputs-wrapper {
         max-width: rem(260px);
         margin: 0 auto;
         margin-top: rem(24px);
+        height: rem(336px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     &__title {
         font-size: rem(48px);
-        font-weight: 800;
+        font-weight: 700;
         // span:last-child {
         //     // color: #44c1f7;
         // }
@@ -37,9 +42,5 @@
         &--loading {
             background: $white;
         }
-    }
-
-    input:last-child {
-        margin: rem(4px) 0px;
     }
 }

@@ -1,0 +1,88 @@
+$marginBorder: rem(14px);
+.react-datepicker-wrapper {
+    width: 100%;
+}
+.react-datepicker__month-container {
+    font-family: '-webkit-pictograph', 'Helvetica';
+    font-weight: 500;
+
+    .react-datepicker__month {
+        margin: rem(1px) $marginBorder $marginBorder $marginBorder;
+    }
+}
+.react-datepicker__day--selected {
+    border: none;
+}
+.react-datepicker {
+    padding: 2px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 6px, rgba(0, 0, 0, 0.07) 0px 0px 0px 1px;
+    &__header {
+        background-color: $white;
+        border: none;
+    }
+    &__day {
+        font-size: 13px;
+        // border: 1px solid rgb(228, 231, 231) ;
+        color: rgb(72, 72, 72);
+        width: rem(37px);
+        height: rem(33px);
+        margin: 0;
+        padding: 0.2rem;
+        padding-top: rem(1px);
+        &:hover {
+            border-radius: 0;
+        }
+        &-name {
+            color: rgb(117, 117, 117);
+            margin: 5px;
+            line-height: 1;
+        }
+        &--selected,
+        &--keyboard-selected {
+            background-color: #25292e;
+
+            color: white !important;
+            border-radius: 0;
+            &:hover {
+                background-color: #000;
+            }
+        }
+        &--keyboard-selected {
+            background-color: #f0f0f0;
+            color: #25292e !important;
+        }
+    }
+    &__current-month {
+        color: rgb(72, 72, 72);
+        font-size: 18px;
+        text-align: center;
+        padding-top: rem(5.6px);
+        padding-bottom: rem(24px);
+    }
+    &__day-names {
+        left: 0px;
+        padding: 0px 13px;
+    }
+    &__triangle {
+        border-bottom-color: $white;
+        &::before {
+            color: #eae4e4;
+        }
+    }
+}
+.react-datepicker-popper[data-placement^='bottom'] .react-datepicker__triangle {
+    border-bottom-color: #fff;
+}
+.react-datepicker-popper[data-placement^='bottom'] .react-datepicker__triangle::before {
+    border-bottom-color: rgb(235, 232, 232);
+}
+
+.react-datepicker__navigation--previous {
+    left: 16px;
+    top: 18px;
+}
+.react-datepicker__navigation--next {
+    right: 16px;
+    top: 18px;
+}

@@ -2,7 +2,7 @@
 
 .page-not-found {
     @include flex($jc: c, $ai: c, $dr: c);
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 3.5rem;
     button {
