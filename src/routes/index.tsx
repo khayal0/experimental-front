@@ -4,7 +4,7 @@ import Loader from 'shared/components/Loader';
 import { PATHS } from './paths';
 
 const LoginPage = lazy(() => import('views/LoginPage'));
-const InsertDataPage = lazy(() => import('views/InsertDataPage'));
+const SendDataPage = lazy(() => import('views/SendDataPage'));
 const UsersTable = lazy(() => import('components/UsersTable'));
 const ImageUpload = lazy(() => import('components/ImageUpload'));
 const NotFound = lazy(() => import('shared/components/NotFound'));
@@ -12,9 +12,9 @@ const NotFound = lazy(() => import('shared/components/NotFound'));
 export const CenterRoutes: JSX.Element = (
     <Suspense fallback={<Loader />}>
         <Routes>
-            <Navigate to={PATHS.INSERTDATA} />
+            <Navigate to={PATHS.SENDDATA} />
             <Route path={PATHS.LOGIN} element={<LoginPage />} />
-            <Route path={PATHS.INSERTDATA} element={<InsertDataPage />} />
+            <Route path={PATHS.SENDDATA} element={<SendDataPage />} />
             <Route path={PATHS.DASHBOARD} element={<Loader />} />
             <Route path={PATHS.USERTABLE} element={<UsersTable />} />
             <Route path={PATHS.UPLOAD} element={<ImageUpload />} />

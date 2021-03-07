@@ -1,6 +1,6 @@
 export const PATHS = {
     LOGIN: '/login',
-    INSERTDATA: '/insertdata',
+    SENDDATA: '/senddata',
     ROOT: '/',
     USERTABLE: '/usertable',
     UPLOAD: '/upload',
