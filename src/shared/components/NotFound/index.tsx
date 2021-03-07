@@ -10,7 +10,7 @@ const NotFoundPage: FC<IProps> = () => {
         <div className="page-not-found">
             <span>Page Not Found</span>
             <Button>
-                <Link to="/">Go Back to Home</Link>
+                <Link to="/">Go Back</Link>
             </Button>
         </div>
     );

@@ -2,22 +2,23 @@
 
 .page-not-found {
     @include flex($jc: c, $ai: c, $dr: c);
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 3.5rem;
+    font-family: 'Open-sans', sans-serif;
+    color: $blackLight;
+    font-size: 4rem;
+    width: 100%;
     button {
         color: $white;
-        margin: rem(30px) 0px;
+        margin: rem(64px) 0px;
         background: $white;
-        border: 1px solid $black;
+        border: 1px solid $sea;
         border-radius: rem(5px);
         transition: all 0.2s ease 0s;
-        font-weight: 600;
-        font-size: 0.9rem;
+        font-size: 1.3rem;
     }
     a {
-        height: rem(40px);
-        width: 200px;
+        height: rem(60px);
+        width: rem(248px);
+        color: $sea;
         @include flex($jc: c, $ai: c);
     }
 }

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Login from 'components/Login';
+import Login from 'components/LoginPage';
 
 const LoginPage: FC = () => {
     return <Login />;

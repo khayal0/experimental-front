@@ -48,15 +48,15 @@ const SendData = () => {
     });
 
     return (
-        <Block className="insert-data-container">
+        <Block className="send-data-container">
             <div className="ghost-element"></div>
-            <Block className="insert-data">
-                <Block className="insert-data__title">
+            <Block className="send-data">
+                <Block className="send-data__title">
                     <span>Send Data</span>
                 </Block>
-                <Block className="insert-data__inputs-wrapper">
+                <Block className="send-data__inputs-wrapper">
                     <Select
-                        className="insert-data__select"
+                        className="send-data__select"
                         value={selectedSite}
                         onChange={handleChangeSite}
                         options={options}
@@ -67,7 +67,7 @@ const SendData = () => {
                     />
                     <Block className="datepicker-wrapper">
                         <DatePicker
-                            className="insert-data__datepicker"
+                            className="send-data__datepicker"
                             dateFormat="dd-MM-yyyy"
                             onChange={handleDateChange}
                             selected={startDate}
@@ -77,7 +77,7 @@ const SendData = () => {
                     <InputText onChange={handleCommunalChange} name="gas" type="number" placeholder="Gas" />
                     <InputText onChange={handleCommunalChange} name="electric" type="number" placeholder="Electric" />
                     <InputText onChange={handleCommunalChange} name="water" type="number" placeholder="Water" />
-                    <Button className="insert-data__continue" loading={loading} onClick={handleSend}>
+                    <Button className="send-data__continue" loading={loading} onClick={handleSend}>
                         Send
                     </Button>
                 </Block>
