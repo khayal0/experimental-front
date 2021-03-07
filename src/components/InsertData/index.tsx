@@ -5,17 +5,15 @@ import Block from 'shared/components/Block';
 import Button from 'shared/components/Button';
 import Footer from 'shared/components/Footer';
 import InputText from 'shared/components/Inputs/InputText';
-import dateFnsFormat from 'date-fns/format';
+
+import { IInputValue, ISelectValue, IUtilities } from 'models';
 
 import 'react-datepicker/dist/react-datepicker.css';
 import './index.scss';
 
 const InsertData = () => {
     const [loading, setLoading] = useState<boolean>(false);
-    const [date, setDate] = useState<Date>(new Date());
-    const [gas, setGas] = useState<number>();
-    const [electric, setElectric] = useState<number>();
-    const [water, setWater] = useState<number>();
+    const [utilities, setUtilities] = useState<IUtilities>();
     const [selectedSite, setSelectedSite] = useState<any>(null);
     const [startDate, setStartDate] = useState(new Date());
     const options = [
@@ -24,16 +22,19 @@ const InsertData = () => {
         { value: 'netanya', label: 'Netanya' },
         { value: 'istanbul', label: 'Istanbul' },
     ];
+
     // handlers
     const handleSend = () => {
         setLoading(true);
     };
-    const handleDateChange = (e: any) => {
-        console.log(e);
-        setDate(date);
+    const handleDateChange = (value: Date) => {
+        setStartDate(value);
     };
-    const handleChangeSite = (e: any) => {
-        setSelectedSite(e);
+    const handleChangeSite = (value: ISelectValue) => {
+        setSelectedSite(value);
+    };
+    const handleCommunalChange = (value: IInputValue) => {
+        console.log(value);
     };
 
     //custom style for select
@@ -68,14 +69,14 @@ const InsertData = () => {
                         <DatePicker
                             className="insert-data__datepicker"
                             dateFormat="dd-MM-yyyy"
-                            onChange={(value: Date) => setDate(value)}
-                            selected={date}
+                            onChange={handleDateChange}
+                            selected={startDate}
                         />
                     </Block>
 
-                    <InputText onChange={handleDateChange} name="gas" type="text" placeholder="Gas" />
-                    <InputText onChange={handleDateChange} name="electric" type="text" placeholder="Electric" />
-                    <InputText onChange={handleDateChange} name="water" type="text" placeholder="Water" />
+                    <InputText onChange={handleCommunalChange} name="gas" type="number" placeholder="Gas" />
+                    <InputText onChange={handleCommunalChange} name="electric" type="number" placeholder="Electric" />
+                    <InputText onChange={handleCommunalChange} name="water" type="number" placeholder="Water" />
                     <Button className="insert-data__continue" loading={loading} onClick={handleSend}>
                         Send
                     </Button>

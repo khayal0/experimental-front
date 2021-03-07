@@ -58,3 +58,20 @@ export interface IProduct {
     oldPrice: number;
     info: string;
 }
+
+// Select and Input types
+export interface ISelectValue {
+    label: string;
+    value: string;
+}
+export interface IInputValue {
+    name: string;
+    value: string;
+}
+
+// communals
+export interface IUtilities {
+    electric: number;
+    gas: number;
+    water: number;
+}
