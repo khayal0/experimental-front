@@ -1,10 +1,11 @@
 Added:
 
 1. components
-2. loader for button and selection for input text 10. react-datepicker added
+2. loader for button and selection for input text
 3. react-datepicker added
 4. react-select added
 5. react-data-grid added
+6. changed loader
 
 Need to consider:
 

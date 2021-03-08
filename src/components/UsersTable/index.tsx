@@ -22,7 +22,7 @@ const UsersTable: FC<any> = ({ users, userSelected, usersDataRequested }) => {
         userSelected(id);
     };
 
-    const headersData = ['NAME', 'DATE', 'EMAIL', 'PHONE', 'STATUS', 'TOTAL TASKS'];
+    const headersData = ['name', 'date', 'email', 'phone', 'status', 'total tasks'];
     const columnSize = `grid-${headersData.length}`;
 
     const headers = (
@@ -45,7 +45,7 @@ const UsersTable: FC<any> = ({ users, userSelected, usersDataRequested }) => {
     <div className="cell" data-title={headersData[2]}>{email}</div>
     <div className="cell" data-title={headersData[3]}>{phone}</div>
     <div className="cell" data-title={headersData[4]}>
-        <button className={status}>{status}</button></div>
+        <span className={status}>{status}</span></div>
     <div className="cell" data-title={headersData[5]}>{totaltasks}</div>
      </div>);
     });

@@ -47,8 +47,8 @@
 }
 
 .data-grid__table {
-    width: 100%;
-    height: 90vh;
+    width: 95%;
+    height: 100vh;
     font-family: Inter;
     padding: 1rem;
 }
@@ -64,6 +64,7 @@
         font-weight: 700;
         font-size: 12px;
         text-transform: capitalize;
+        font-weight: 500;
         .rdg-cell {
             border-right: none;
         }

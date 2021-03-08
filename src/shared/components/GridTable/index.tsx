@@ -1,13 +1,12 @@
 import React, { FC } from 'react';
 import Block from '../Block';
 import './index.scss';
-//prettier-ignore
 
-interface GridProps  {
-    headers : any,
-    body: any,
-    columnSize: string,
-    className?: string
+interface GridProps {
+    headers: any;
+    body: any;
+    columnSize: string;
+    className?: string;
 }
 
 const Grid: FC<GridProps> = ({ headers, body, columnSize, className }) => {
