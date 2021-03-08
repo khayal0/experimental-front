@@ -1,22 +1,24 @@
 @import 'shared/assets/styles/main.scss';
 
 .data-grid-container {
-    width: inherit;
+    width: 90%;
     @include flex($dr: c, $ai: c);
     & .footer {
         display: none;
     }
 }
 .data-grid {
-    font-family: 'Inter', sans-serif;
-
     &__inputs-wrapper {
-        width: rem(208px);
+        font-family: 'Inter', sans-serif;
+        width: 100%;
         // margin-top: rem(28px);
         // height: rem(160px);
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
+        button {
+            margin: 1rem;
+            width: rem(100px);
+        }
     }
     &__title {
         font-size: rem(40px);
@@ -45,14 +47,25 @@
 }
 
 .data-grid__table {
-    width: calc(100%);
+    width: 100%;
     height: 90vh;
     font-family: Inter;
     padding: 1rem;
 }
 
 .data-grid-component {
-    width: 91vw;
     height: 80vh;
     margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+
+    .rdg-header-row {
+        // background: rgb(208, 255, 36);
+        // color: rgba(58, 54, 54, 0.788);
+        font-weight: 700;
+        font-size: 12px;
+        text-transform: uppercase;
+        .rdg-cell {
+            border-right: none;
+        }
+    }
 }
