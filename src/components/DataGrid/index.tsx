@@ -7,30 +7,27 @@ import Footer from 'shared/components/Footer';
 import './index.scss';
 
 const columns = [
-    { editor: TextEditor, key: 'id', name: 'ID' },
-    { editor: TextEditor, key: 'title', name: 'Title' },
-    { editor: TextEditor, key: 'count', name: 'Count' },
-    { editor: TextEditor, key: 'count', name: 'Count' },
-    { editor: TextEditor, key: 'count', name: 'Count' },
-    { editor: TextEditor, key: 'count', name: 'Count' },
-    { editor: TextEditor, key: 'count', name: 'Count' },
-    { editor: TextEditor, key: 'count', name: 'Count' },
-    { editor: TextEditor, key: 'count', name: 'Count' },
-    { editor: TextEditor, key: 'count', name: 'Count' },
-    { editor: TextEditor, key: 'count', name: 'Count' },
+    { editor: TextEditor, key: 'comment', name: 'comment' },
+    { editor: TextEditor, key: 'city', name: 'city' },
+    { editor: TextEditor, key: 'january', name: 'January' },
+    { editor: TextEditor, key: 'feburary', name: 'feburary' },
+    { editor: TextEditor, key: 'march', name: 'march' },
+    { editor: TextEditor, key: 'april', name: 'april' },
+    { editor: TextEditor, key: 'may', name: 'may' },
+    { editor: TextEditor, key: 'june', name: 'june' },
 ];
 
-const rows = [
-    { id: 0, title: 'row1', count: 20, id1: 0, title1: 'row1', count1: 20 },
-    { id: 0, title: 'row1', count: 20, id1: 0, title1: 'row1', count1: 20 },
-    { id: 0, title: 'row1', count: 20, id1: 0, title1: 'row1', count1: 20 },
-    { id: 0, title: 'row1', count: 20, id1: 0, title1: 'row1', count1: 20 },
-    { id: 0, title: 'row1', count: 20, id1: 0, title1: 'row1', count1: 20 },
-    { id: 0, title: 'row1', count: 20, id1: 0, title1: 'row1', count1: 20 },
-    { id: 0, title: 'row1', count: 20, id1: 0, title1: 'row1', count1: 20 },
-    { id: 0, title: 'row1', count: 20, id1: 0, title1: 'row1', count1: 20 },
-    { id: 0, title: 'row1', count: 20, id1: 0, title1: 'row1', count1: 20 },
-    { id: 0, title: 'row1', count: 20, id1: 0, title1: 'row1', count1: 20 },
+const initialRows = [
+    { comment: '', city: 'Haifa', january: 223140, feburary: 3243240, march: 'row1', april: 20324 },
+    { comment: 'too much consuption', city: 'row1', january: 42120, feburary: 0, march: 'row1', april: 23240 },
+    { comment: '', city: 'Baku', january: 20, feburary: 342430, march: 'row1', april: 23420 },
+    { comment: '', city: 'Istanbul', january: 2420, feburary: 4335230, march: 'row1', april: 230 },
+    { comment: '', city: 'Rome', january: 320, feburary: 3420, march: 'row1', april: 220 },
+    { comment: '', city: 'Denver', january: 120, feburary: 110, march: 'row1', april: 1120 },
+    { comment: '', city: 'Bisbane', january: 20, feburary: 240, march: 'row1', april: 3320 },
+    { comment: '', city: 'Koyoto', january: 220, feburary: 1240, march: 'row1', april: 3320 },
+    { comment: '', city: 'Prague', january: 210, feburary: 50, march: 'row1', april: 1220 },
+    { comment: '', city: 'Madrid', january: 210, feburary: 440, march: 'row1', april: 12320 },
 ];
 
 interface IGridState {
@@ -40,17 +37,18 @@ interface IGridState {
 }
 
 const DataGrid = () => {
+    const [rows, setRows] = useState(initialRows);
     const [selectedRows, setSelectedRows] = useState(() => new Set<React.Key>());
-
-    // function handleFill({ columnKey, sourceRow, targetRows }: any): any[] {
-    //     return targetRows.map((row: any) => ({ ...row, [columnKey as keyof any]: sourceRow[columnKey as keyof any] }));
-    // }
 
     //handlers
 
     const rowKeyGetter = (row: any) => {
         return row.id;
     };
+
+    // function handleFill({ columnKey, sourceRow, targetRows }: any): any[] {
+    //     return targetRows.map((row: any) => ({ ...row, [columnKey as keyof any]: sourceRow[columnKey as keyof any] }));
+    // }
 
     return (
         <Block className="data-grid-container">
@@ -76,7 +74,11 @@ const DataGrid = () => {
                     columns={columns}
                     className="data-grid-component"
                     rowHeight={40}
+                    //not used
+                    onRowsChange={setRows}
                     rowKeyGetter={rowKeyGetter}
+                    selectedRows={selectedRows}
+                    onSelectedRowsChange={setSelectedRows}
                 />
             </Block>
             <Footer />

@@ -20,7 +20,7 @@ export const CenterRoutes: JSX.Element = (
             <Route path={PATHS.SENDDATA} element={<SendDataPage />} />
             <Route path={PATHS.ADMINPAGE} element={<AdminPage />} />
             <Route path={PATHS.DATAGRID} element={<DataGridPage />} />
-            {/* <Route path={PATHS.DASHBOARD} element={<Loader />} /> */}
+            <Route path={PATHS.DASHBOARD} element={<Loader />} />
             <Route path={PATHS.USERTABLE} element={<UsersTable />} />
             {/* <Route path={PATHS.UPLOAD} element={<ImageUpload />} /> */}
             <Route path="/*" element={<NotFound />} />

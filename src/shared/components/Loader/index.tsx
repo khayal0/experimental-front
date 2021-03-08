@@ -8,7 +8,9 @@ interface IProps {}
 const Loading: FC<IProps> = () => {
     return (
         <Container className="center">
-            <div className="lib-loader"></div>
+            <div className="lib-loader">
+                <div></div>
+            </div>
         </Container>
     );
 };

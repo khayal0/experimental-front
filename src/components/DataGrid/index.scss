@@ -63,9 +63,12 @@
         // color: rgba(58, 54, 54, 0.788);
         font-weight: 700;
         font-size: 12px;
-        text-transform: uppercase;
+        text-transform: capitalize;
         .rdg-cell {
             border-right: none;
         }
+    }
+    .rdg-cell {
+        text-align: center;
     }
 }
