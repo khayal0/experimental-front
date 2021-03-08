@@ -1,4 +1,4 @@
-import { EUser } from 'components/UsersTable/ducks/types';
+import { EUser } from 'components/UserTable/ducks/types';
 import { IRootStateCombinedReducer } from 'store/combinedReducer';
 import { EUpload } from 'components/ImageUpload/ducks/types';
 // IUser

@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import userReducer from 'components/UsersTable/ducks/reducer';
+import userReducer from 'components/UserTable/ducks/reducer';
 
 const combinedReducer = combineReducers({
     users: userReducer,
