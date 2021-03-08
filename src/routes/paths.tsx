@@ -4,7 +4,7 @@ export const PATHS = {
     ADMINPAGE: '/admin',
     DATAGRID: '/admin/datagrid',
     ROOT: '/',
-    USERSTABLE: '/userstable',
+    USERTABLE: '/usertable',
     UPLOAD: '/upload',
     DASHBOARD: '/dashboard',
 };

@@ -8,7 +8,7 @@ const SendDataPage = lazy(() => import('views/SendDataPage'));
 const AdminPage = lazy(() => import('views/AdminPage'));
 const DataGridPage = lazy(() => import('views/DataGridPage'));
 
-const UsersTable = lazy(() => import('components/UsersTable'));
+const UserTable = lazy(() => import('components/UserTable'));
 // const ImageUpload = lazy(() => import('components/ImageUpload'));
 const NotFound = lazy(() => import('shared/components/NotFound'));
 
@@ -21,7 +21,7 @@ export const CenterRoutes: JSX.Element = (
             <Route path={PATHS.ADMINPAGE} element={<AdminPage />} />
             <Route path={PATHS.DATAGRID} element={<DataGridPage />} />
             <Route path={PATHS.DASHBOARD} element={<Loader />} />
-            <Route path={PATHS.USERSTABLE} element={<UsersTable />} />
+            <Route path={PATHS.USERTABLE} element={<UserTable />} />
             {/* <Route path={PATHS.UPLOAD} element={<ImageUpload />} /> */}
             <Route path="/*" element={<NotFound />} />
         </Routes>

@@ -87,7 +87,7 @@ const DataGrid = () => {
                     columns={columns}
                     className="data-grid-component"
                     rowHeight={50}
-                    headerRowHeight={30}
+                    headerRowHeight={36}
                     //not used
                     onRowsChange={setRows}
                     rowKeyGetter={rowKeyGetter}

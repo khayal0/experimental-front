@@ -1,10 +1,10 @@
 @import 'shared/assets/styles/main.scss';
 
-.send-datan-container {
+.send-data-container {
     width: inherit;
     @include flex($dr: c, $jc: sb, $ai: c);
 }
-.send-datan {
+.send-data {
     font-family: 'Inter', sans-serif;
 
     &__inputs-wrapper {

@@ -11,7 +11,7 @@ interface IProps {
     users: IUsers;
 }
 
-const UsersTable: FC<any> = ({ users, userSelected, usersDataRequested }) => {
+const UserTable: FC<any> = ({ users, userSelected, usersDataRequested }) => {
     useEffect(() => {
         usersDataRequested();
     }, [usersDataRequested]);
@@ -52,4 +52,4 @@ const UsersTable: FC<any> = ({ users, userSelected, usersDataRequested }) => {
     return <GridTable {...{ body, headers, columnSize }} />;
 };
 const mapStateToProps = (state: IRootState) => ({ users: state.users });
-export default connect(mapStateToProps, { userSelected, usersDataRequested })(UsersTable);
+export default connect(mapStateToProps, { userSelected, usersDataRequested })(UserTable);

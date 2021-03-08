@@ -9,7 +9,7 @@
 }
 .data-grid {
     &__inputs-wrapper {
-        font-family: 'Inter', sans-serif;
+        font-family: Inter;
         width: 100%;
         // margin-top: rem(28px);
         // height: rem(160px);
@@ -49,22 +49,23 @@
 .data-grid__table {
     width: 95%;
     height: 100vh;
-    font-family: Inter;
     padding: 1rem;
 }
 
 .data-grid-component {
     height: 80vh;
     margin: 0 auto;
-    font-family: 'Inter', sans-serif;
+    // font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, pingfang sc, hiragino sans gb, microsoft yahei,
+        helvetica neue, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
 
     .rdg-header-row {
-        // background: rgb(208, 255, 36);
+        background: #f5f5f5;
         // color: rgba(58, 54, 54, 0.788);
         font-weight: 700;
         font-size: 12px;
         text-transform: capitalize;
-        font-weight: 500;
+        font-weight: 400;
         .rdg-cell {
             border-right: none;
         }

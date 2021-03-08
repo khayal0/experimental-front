@@ -3,7 +3,7 @@
 .grid-table {
     display: grid;
     max-height: 100vh;
-    overflow: scroll;
+    // overflow: scroll;
     min-height: 90%;
     min-width: 90%;
     margin: 2rem;
@@ -13,6 +13,7 @@
 }
 
 .grid-table .cell {
+    max-height: min-content !important;
     // @media (max-width: 800px) {
     //     //headers
     //     &:before {

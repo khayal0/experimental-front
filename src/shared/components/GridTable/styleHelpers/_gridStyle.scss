@@ -1,8 +1,8 @@
 @import 'shared/assets/styles/main.scss';
 
 .grid-table {
-    background: #fffafa36; // color of artificial borders
-    color: #686464; // color of texts of body rows except buttons
+    background: #fbfafa10; // color of artificial borders
+    color: #222020; // color of texts of body rows except buttons
     font-family: -apple-system, BlinkMacSystemFont, segoe ui, pingfang sc, hiragino sans gb, microsoft yahei,
         helvetica neue, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
     .cell {
@@ -10,8 +10,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 10%rem;
         border-right: 1px solid $antGray;
+        max-height: 10px !important;
     }
 }
 
@@ -21,9 +21,10 @@
     // border-radius: 3px; // background color prevent border to be fully visible
     cursor: pointer;
     border-bottom: 1px solid $antGray;
+    border-left: 1px solid $antGray;
+
     border-top: none;
     border-radius: 0;
-    border-left: 1px solid $antGray;
     &:first-child {
         font-weight: bold;
         border-top: 1px solid $antGray;
