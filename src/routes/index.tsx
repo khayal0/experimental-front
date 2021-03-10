@@ -15,7 +15,7 @@ const NotFound = lazy(() => import('shared/components/NotFound'));
 export const CenterRoutes: JSX.Element = (
     <Suspense fallback={<Loader />}>
         <Routes>
-            <Navigate to={PATHS.DATAGRID} />
+            <Navigate to={PATHS.LOGIN} />
             <Route path={PATHS.LOGIN} element={<LoginPage />} />
             <Route path={PATHS.SENDDATA} element={<SendDataPage />} />
             <Route path={PATHS.ADMINPAGE} element={<AdminPage />} />
