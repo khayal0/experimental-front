@@ -11,7 +11,6 @@ const DataGridPage = lazy(() => import('views/DataGridPage'));
 const UserTable = lazy(() => import('components/UserTable'));
 // const ImageUpload = lazy(() => import('components/ImageUpload'));
 const NotFound = lazy(() => import('shared/components/NotFound'));
-
 export const CenterRoutes: JSX.Element = (
     <Suspense fallback={<Loader />}>
         <Routes>

@@ -2,13 +2,13 @@ import React, { FC, useEffect } from 'react';
 import { connect } from 'react-redux';
 import GridTable from 'shared/components/GridTable';
 import { userSelected, usersDataRequested } from './ducks/actions';
-import { IRootState, IUsers } from 'models';
+import { IRootState } from 'models';
 // import { IUserState, ISelectUser, IUsers } from 'models';
 
 interface IProps {
     userSelected(id: string): string;
     usersDataRequested(): void;
-    users: IUsers;
+    users: any;
 }
 
 const UserTable: FC<any> = ({ users, userSelected, usersDataRequested }) => {

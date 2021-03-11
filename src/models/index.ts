@@ -25,3 +25,9 @@ export interface IUtilities {
     gas: number;
     water: number;
 }
+
+// actions
+
+export interface IToken {
+    token: string;
+}

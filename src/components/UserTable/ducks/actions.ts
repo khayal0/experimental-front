@@ -1,14 +1,13 @@
-import { IUserSlected, IDataRequested } from 'models';
 import { EUser } from './types';
 
-export const userSelected = (id: string): IUserSlected => {
+export const userSelected = (id: string): any => {
     return {
         type: EUser.USERSELECTED,
         payload: id,
     };
 };
 
-export const usersDataRequested = (): IDataRequested => {
+export const usersDataRequested = (): any => {
     return {
         type: EUser.USERSDATAREQUESTED,
     };

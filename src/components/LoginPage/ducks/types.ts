@@ -1,5 +1,5 @@
 export enum EAuth {
-    AUTHSTARTED = 'upload/authstarted',
-    AUTHPENDING = 'upload/authpending',
-    AUTHFINISHED = 'upload/authfinished',
+    AUTHREQUESTED = 'upload/authrequested',
+    AUTHFAILED = 'upload/authfailed',
+    AUTHSUCCEED = 'upload/authsucceed',
 }

@@ -1,35 +1,26 @@
-import { put, takeLatest } from 'redux-saga/effects';
-import { EUpload } from './types';
 import axios from 'axios';
+import { put, takeLatest } from 'redux-saga/effects';
+import { PATHS } from 'routes/paths';
+import { ICredentials, IToken } from 'models';
+import { EAuth } from './types';
+interface ILoginAction {
+    type: EAuth;
+    payload: ICredentials;
+}
 
-import { IUploadStarted } from 'models';
-
-function* uploadImage(action: IUploadStarted) {
-    const url = 'http://127.0.0.1:5000/upload';
+function* loginUser(action: ILoginAction) {
+    const url = `http://${process.env.REACT_APP_ORIGIN}:5111${PATHS.LOGIN}`;
     const config = { headers: {} };
-    console.log('== action in uploadImage Saga ==>', action);
+    console.log('== action login saga ==>', action);
     try {
-        const json = yield axios.post(url, action.payload, config);
-        console.log('== uploadedData  axios response json in saga ==>', json);
-        // if (json.status === 201) {
-        //     try {
-        //         const productUrl = 'http://127.0.0.1:5000/products';
-        //         yield axios.post(productUrl, action.payload.info, config);
-        //     } catch (error) {
-        //         alert(error.message);
-        //     }
-        // } else {
-        //     alert(json.status);
-        // }
+        const json: IToken = yield axios.post(url, action.payload, config);
+        localStorage.setItem('token', json?.token);
     } catch (error) {
-        alert(error.message);
+        console.log('== Error in login user ==>', error.message);
+        yield put({ type: EAuth.AUTHFAILED, payload: error.message });
     }
-
-    // yield put({ type: EUpload.UPLOADFINISHED, payload: json.data });
+    yield put({ type: EAuth.AUTHSUCCEED });
 }
-export function* uploadActionWatcher() {
-    yield takeLatest(EUpload.UPLOADSTARTED, uploadImage);
+export function* loginActionWatcher() {
+    yield takeLatest(EAuth.AUTHREQUESTED, loginUser);
 }
-
-// const bodyFormData = new FormData();
-// bodyFormData.append('image', imageFile);

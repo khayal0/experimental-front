@@ -1,15 +1,21 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
+import { connect } from 'react-redux';
 import Block from 'shared/components/Block';
 import Button from 'shared/components/Button';
 import Footer from 'shared/components/Footer';
 import InputText from 'shared/components/Inputs/InputText';
-import { IInputValue } from 'models';
+import { ICredentials, IInputValue } from 'models';
+import { loginRequested } from './ducks/actions';
 
 import './index.scss';
 
-const LoginPage = () => {
+interface IProps {
+    loginRequested: typeof loginRequested;
+}
+
+const LoginPage: FC<IProps> = ({ loginRequested }) => {
     const [loading, setLoading] = useState(false);
-    const [credentials, setCredentials] = useState({
+    const [credentials, setCredentials] = useState<ICredentials>({
         username: '',
         password: '',
     });
@@ -19,6 +25,7 @@ const LoginPage = () => {
         setCredentials({ ...credentials, [credential.name]: credential.value });
     };
     const handleContinue = () => {
+        loginRequested(credentials);
         setLoading(true);
     };
     return (
@@ -42,4 +49,4 @@ const LoginPage = () => {
     );
 };
 
-export default LoginPage;
+export default connect(null, { loginRequested })(LoginPage);

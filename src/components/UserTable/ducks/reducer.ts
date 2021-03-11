@@ -1,4 +1,3 @@
-import { IUsers } from 'models';
 import { EUser } from './types';
 
 const initialState = {
@@ -18,7 +17,7 @@ const initialState = {
 };
 // const initialState = null;
 
-const userReducer = (state: IUsers = initialState, action: any): IUsers => {
+const userReducer = (state: any = initialState, action: any): any => {
     switch (action.type) {
         case EUser.USERSELECTED:
             return { ...state, selectedUserId: action.payload };
