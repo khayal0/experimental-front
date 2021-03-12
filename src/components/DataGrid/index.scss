@@ -55,3 +55,17 @@
         text-align: center;
     }
 }
+@media (max-width: $breakpoint-mobile) {
+    .data-grid__inputs-wrapper {
+        & .lib-black-button {
+            color: $white;
+            margin: rem(10px);
+            width: 20%;
+        }
+    }
+    .data-grid__table {
+        width: 100%;
+        height: 100vh;
+        padding: 0.5rem;
+    }
+}
