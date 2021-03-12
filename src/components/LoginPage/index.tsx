@@ -13,16 +13,13 @@ import { useLocation } from 'react-router';
 interface IProps {
     loginRequested: typeof loginRequested;
 }
-interface loginLocation {
-    authFailed: boolean;
-    error: string;
-}
 
 const LoginPage: FC<IProps> = ({ loginRequested }) => {
-    const [loading, setLoading] = useState(false);
     const location = useLocation<History>();
     const unauthorized = location.pathname.includes('unauthorized');
 
+    // states
+    const [loading, setLoading] = useState(false);
     const [credentials, setCredentials] = useState<ICredentials>({
         username: '',
         password: '',
@@ -36,6 +33,8 @@ const LoginPage: FC<IProps> = ({ loginRequested }) => {
         loginRequested(credentials);
         setLoading(true);
     };
+
+    // render
     return (
         <Block className="login-page-container">
             <div className="ghost-element"></div>
