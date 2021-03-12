@@ -6,14 +6,14 @@ import Button from 'shared/components/Button';
 import Footer from 'shared/components/Footer';
 import InputText from 'shared/components/Inputs/InputText';
 
-import { IInputValue, ISelectValue, IUtilities } from 'models';
+import { IInputValue, ISelectValue } from 'models';
 
 import 'react-datepicker/dist/react-datepicker.css';
 import './index.scss';
 
 const SendData = () => {
     const [loading, setLoading] = useState<boolean>(false);
-    const [utilities, setUtilities] = useState<IUtilities>();
+    // const [utilities, setUtilities] = useState<IUtilities>();
     const [selectedSite, setSelectedSite] = useState<any>(null);
     const [startDate, setStartDate] = useState(new Date());
     const options = [

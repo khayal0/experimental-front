@@ -8,13 +8,21 @@ import { ICredentials, IInputValue } from 'models';
 import { loginRequested } from './ducks/actions';
 
 import './index.scss';
+import { useLocation } from 'react-router';
 
 interface IProps {
     loginRequested: typeof loginRequested;
 }
+interface loginLocation {
+    authFailed: boolean;
+    error: string;
+}
 
 const LoginPage: FC<IProps> = ({ loginRequested }) => {
     const [loading, setLoading] = useState(false);
+    const location = useLocation<History>();
+    const unauthorized = location.pathname.includes('unauthorized');
+
     const [credentials, setCredentials] = useState<ICredentials>({
         username: '',
         password: '',
@@ -42,6 +50,9 @@ const LoginPage: FC<IProps> = ({ loginRequested }) => {
                     <Button loading={loading} onClick={handleContinue} className="login-page__continue">
                         Continue
                     </Button>
+                    {unauthorized && (
+                        <span className="login-page__unauthorized">Unauthorized - Please login as Admin</span>
+                    )}
                 </Block>
             </Block>
             <Footer />

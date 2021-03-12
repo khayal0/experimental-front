@@ -18,12 +18,12 @@ const ProtectedRoute = ({ component: Comp, userRole, path, ...rest }: any) => {
                 ) : (
                     <Redirect
                         to={{
-                            pathname: '/',
-                            state: {
-                                prevLocation: path,
-                                error: 'Token time expired or You did not login as Admin.',
-                                authFailed: true,
-                            },
+                            pathname: '/login/unauthorized',
+                            // state: {
+                            //     prevLocation: path,
+                            //     error: 'Token time expired or You did not login as Admin.',
+                            //     authFailed: true,
+                            // },
                         }}
                     />
                 );
