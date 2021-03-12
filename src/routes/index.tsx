@@ -1,28 +1,27 @@
 import React, { Suspense, lazy } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
 import Loader from 'shared/components/Loader';
 import { PATHS } from './paths';
+import { Redirect, Route, Switch } from 'react-router';
+import ProtectedRoute from 'shared/components/ProtectedRoute';
 
 const LoginPage = lazy(() => import('views/LoginPage'));
 const SendDataPage = lazy(() => import('views/SendDataPage'));
 const AdminPage = lazy(() => import('views/AdminPage'));
 const DataGridPage = lazy(() => import('views/DataGridPage'));
-
 const UserTable = lazy(() => import('components/UserTable'));
-// const ImageUpload = lazy(() => import('components/ImageUpload'));
 const NotFound = lazy(() => import('shared/components/NotFound'));
-export const CenterRoutes: JSX.Element = (
+
+export const routes: JSX.Element = (
     <Suspense fallback={<Loader />}>
-        <Routes>
-            <Navigate to={PATHS.LOGIN} />
-            <Route path={PATHS.LOGIN} element={<LoginPage />} />
-            <Route path={PATHS.SENDDATA} element={<SendDataPage />} />
-            <Route path={PATHS.ADMINPAGE} element={<AdminPage />} />
-            <Route path={PATHS.DATAGRID} element={<DataGridPage />} />
-            <Route path={PATHS.DASHBOARD} element={<Loader />} />
-            <Route path={PATHS.USERTABLE} element={<UserTable />} />
-            {/* <Route path={PATHS.UPLOAD} element={<ImageUpload />} /> */}
-            <Route path="/*" element={<NotFound />} />
-        </Routes>
+        <Switch>
+            <Route path={PATHS.LOGIN} component={LoginPage} />
+            <ProtectedRoute path={PATHS.ADMINPAGE} component={AdminPage} />
+            <Route path={PATHS.SENDDATA} component={SendDataPage} />
+            <Route path={PATHS.DATAGRID} component={DataGridPage} />
+            <Route path={PATHS.SENDDATA} component={SendDataPage} />
+            <Route path={PATHS.USERTABLE} component={UserTable} />
+            <Redirect exact from={PATHS.ROOT} to={PATHS.LOGIN} />
+            <Route path="/*" render={() => <NotFound />} />
+        </Switch>
     </Suspense>
 );

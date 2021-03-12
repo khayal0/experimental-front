@@ -31,3 +31,8 @@ export interface IUtilities {
 export interface IToken {
     token: string;
 }
+
+export enum EUserRole {
+    ADMIN = 'admin',
+    MODERTOR = 'moderator',
+}

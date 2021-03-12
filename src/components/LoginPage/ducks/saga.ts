@@ -1,8 +1,10 @@
 import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
+import { push } from 'connected-react-router';
 import { PATHS } from 'routes/paths';
 import { ICredentials, IToken } from 'models';
 import { EAuth } from './types';
+
 interface ILoginAction {
     type: EAuth;
     payload: ICredentials;
@@ -15,6 +17,7 @@ function* loginUser(action: ILoginAction) {
     try {
         const json: IToken = yield axios.post(url, action.payload, config);
         localStorage.setItem('token', json?.token);
+        yield put(push('/dashboard'));
     } catch (error) {
         console.log('== Error in login user ==>', error.message);
         yield put({ type: EAuth.AUTHFAILED, payload: error.message });
