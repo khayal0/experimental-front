@@ -140,10 +140,11 @@ const DataGrid = () => {
     // };
     return (
         <Block className="data-grid-container">
-            {/* <Block className="data-grid__title">
+            <header>
+                {/* <Block className="data-grid__title">
                     <span>EDIT DATA</span>
                 </Block> */}
-
+            </header>
             <Block className="data-grid__inputs-wrapper">
                 <Link className="lib-black-button" to={PATHS.ADMINPAGE}>
                     Back
