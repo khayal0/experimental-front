@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import ReactDataGrid, { TextEditor } from 'react-data-grid';
+import { Link } from 'react-router-dom';
+import { PATHS } from 'routes/paths';
 import Block from 'shared/components/Block';
 import Button from 'shared/components/Button';
 import Footer from 'shared/components/Footer';
@@ -144,7 +146,7 @@ const DataGrid = () => {
 
             <Block className="data-grid__inputs-wrapper">
                 <Button className="data-grid__continue" loading={false} onClick={() => {}}>
-                    Back
+                    <Link to={PATHS.ADMINPAGE}>Back</Link>
                 </Button>
                 {/* <Button className="data-grid__continue" loading={false} onClick={() => {}}>
                     Refresh

@@ -33,10 +33,15 @@
         font-weight: 600;
         font-size: 0.9rem;
         font-family: inherit;
-        &:hover {
+        &:hover,
+        &:hover:visited {
             background: $white;
             color: $black;
         }
+        &:visited {
+            color: $white;
+        }
+
         &--loading {
             background: $white;
         }

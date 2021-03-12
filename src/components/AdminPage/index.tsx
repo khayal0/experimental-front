@@ -16,15 +16,15 @@ const AdminPage = () => {
                     <span>Admin</span>
                 </Block>
                 <Block className="admin-page__inputs-wrapper">
-                    <Button className="admin-page__continue" loading={false} onClick={() => {}}>
+                    <Link className="admin-page__continue" to={PATHS.DATAGRID}>
                         Add Comment to Summary
-                    </Button>
+                    </Link>
                     <Button className="admin-page__continue" loading={false} onClick={() => {}}>
                         Download Summary
                     </Button>
-                    <Button className="admin-page__continue" loading={false} onClick={() => {}}>
-                        <Link to={PATHS.DATAGRID}>Edit parameters</Link>
-                    </Button>
+                    <Link className="admin-page__continue" to={PATHS.DATAGRID}>
+                        Edit parameters
+                    </Link>
                 </Block>
             </Block>
             <Footer />

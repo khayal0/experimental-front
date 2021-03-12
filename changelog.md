@@ -19,3 +19,4 @@ Need to consider:
 4. Concurrent Mode
 5. upload progress with saga or thunk, better error handling is needed
 6. test on IOS/MAC/ANDROID/WINDOWS and browsers
+7. password not match - redux state should be added

@@ -8,16 +8,13 @@
     width: 100%;
     button {
         color: $sea;
+        height: rem(60px);
+        width: rem(248px);
         margin: rem(64px) 0px;
         background: $white;
         border: 1px solid $sea;
         border-radius: rem(5px);
         transition: all 0.2s ease 0s;
         font-size: 1.3rem;
-    }
-    a {
-        height: rem(60px);
-        width: rem(248px);
-        @include flex($jc: c, $ai: c);
     }
 }
