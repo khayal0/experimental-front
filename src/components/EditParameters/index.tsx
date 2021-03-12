@@ -5,6 +5,7 @@ import { PATHS } from 'routes/paths';
 import Block from 'shared/components/Block';
 import Button from 'shared/components/Button';
 import Footer from 'shared/components/Footer';
+import { initialRows } from './utilities';
 
 import './index.scss';
 
@@ -18,105 +19,6 @@ const columns = [
     { key: 'april', width: 120, name: 'april', editor: TextEditor },
     { key: 'may', width: 120, name: 'may', editor: TextEditor },
     { key: 'june', width: 120, name: 'june', editor: TextEditor },
-    { key: 'july', width: 120, name: 'july', editor: TextEditor },
-    { key: 'august', width: 120, name: 'august', editor: TextEditor },
-    { key: 'september', width: 120, name: 'september', editor: TextEditor },
-    { key: 'october', width: 120, name: 'october', editor: TextEditor },
-    { key: 'november', width: 120, name: 'november', editor: TextEditor },
-    { key: 'december', width: 120, name: 'december', editor: TextEditor },
-];
-
-const initialRows = [
-    {
-        comment: '',
-        city: 'Haifa',
-        moderator: 'Shai',
-        january: 100_232.232,
-        feburary: 3243240,
-        march: 0,
-        april: 20324,
-    },
-    {
-        comment: 'too much energy need for Garden',
-        city: 'Garden',
-        moderator: 'Shai',
-        january: 42120,
-        feburary: 0,
-        march: 0,
-        april: 23240,
-    },
-    {
-        comment: '',
-        city: 'Baku',
-        moderator: 'Shai',
-        january: 20,
-        feburary: 342430,
-        march: 0,
-        april: 23420,
-    },
-    {
-        comment: '',
-        city: 'Istanbul',
-        moderator: 'Khayal',
-        january: 2420,
-        feburary: 4335230,
-        march: 0,
-        april: 230,
-    },
-    {
-        comment: '',
-        city: 'Rome',
-        moderator: 'Alin',
-        january: 320,
-        feburary: 3420,
-        march: 0,
-        april: 220,
-    },
-    {
-        comment: 'beautiful city',
-        city: 'Denver',
-        moderator: 'Lian',
-        january: 120,
-        feburary: 110,
-        march: 0,
-        april: 1120,
-    },
-    {
-        comment: '',
-        city: 'Bisbane',
-        moderator: 'Lian',
-        january: 20,
-        feburary: 240,
-        march: 0,
-        april: 3320,
-    },
-    {
-        comment: '',
-        city: 'Koyoto',
-        moderator: 'Mor',
-        january: 220,
-        feburary: 1240,
-        march: 0,
-        april: 3320,
-    },
-    {
-        comment: 'march is weird',
-        city: 'Prague',
-        moderator: 'Mor',
-        january: 210,
-        feburary: 50,
-        march: 0,
-        april: 1220,
-    },
-    {
-        comment: 'march is weird',
-        city: 'Prague',
-        moderator: 'Mor',
-        january: 210,
-        feburary: 50,
-        march: 0,
-        april: 1220,
-    },
 ];
 
 interface IGridState {
