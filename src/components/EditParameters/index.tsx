@@ -19,11 +19,11 @@ const columns = [
     { key: 'may', width: 120, name: 'may', editor: TextEditor },
     { key: 'june', width: 120, name: 'june', editor: TextEditor },
     { key: 'july', width: 120, name: 'july', editor: TextEditor },
-    // { key: 'august', width: 120, name: 'august', editor: TextEditor },
-    // { key: 'september', width: 120, name: 'september', editor: TextEditor },
-    // { key: 'october', width: 120, name: 'october', editor: TextEditor },
-    // { key: 'november', width: 120, name: 'november', editor: TextEditor },
-    // { key: 'december', width: 120, name: 'december', editor: TextEditor },
+    { key: 'august', width: 120, name: 'august', editor: TextEditor },
+    { key: 'september', width: 120, name: 'september', editor: TextEditor },
+    { key: 'october', width: 120, name: 'october', editor: TextEditor },
+    { key: 'november', width: 120, name: 'november', editor: TextEditor },
+    { key: 'december', width: 120, name: 'december', editor: TextEditor },
 ];
 
 const initialRows = [
@@ -140,11 +140,6 @@ const DataGrid = () => {
     // };
     return (
         <Block className="data-grid-container">
-            <header>
-                {/* <Block className="data-grid__title">
-                    <span>EDIT DATA</span>
-                </Block> */}
-            </header>
             <Block className="data-grid__inputs-wrapper">
                 <Link className="lib-black-button" to={PATHS.ADMINPAGE}>
                     Back
@@ -163,12 +158,10 @@ const DataGrid = () => {
                     className="data-grid-component"
                     rowHeight={50}
                     headerRowHeight={40}
-                    //not used
                     onRowsChange={setRows}
                     rowKeyGetter={rowKeyGetter}
                     selectedRows={selectedRows}
                     onSelectedRowsChange={setSelectedRows}
-                    // rowRenderer={RowRenderer}
                 />
             </Block>
             <Footer />

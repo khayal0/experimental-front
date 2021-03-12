@@ -7,7 +7,7 @@ import ProtectedRoute from 'shared/components/ProtectedRoute';
 const LoginPage = lazy(() => import('views/LoginPage'));
 const SendDataPage = lazy(() => import('views/SendDataPage'));
 const AdminPage = lazy(() => import('views/AdminPage'));
-const DataGridPage = lazy(() => import('views/DataGridPage'));
+const EditParametersPage = lazy(() => import('views/EditParametersPage'));
 const UserTable = lazy(() => import('components/UserTable'));
 const NotFound = lazy(() => import('shared/components/NotFound'));
 
@@ -16,7 +16,7 @@ export const routes: JSX.Element = (
         <Switch>
             <Route path={PATHS.LOGIN} component={LoginPage} />
             <Route path={PATHS.SENDDATA} component={SendDataPage} />
-            <Route path={PATHS.DATAGRID} component={DataGridPage} />
+            <Route path={PATHS.DATAGRID} component={EditParametersPage} />
             <Route path={PATHS.SENDDATA} component={SendDataPage} />
             <ProtectedRoute exact path={PATHS.ADMINPAGE} component={AdminPage} />
             <Route path={PATHS.USERTABLE} component={UserTable} />

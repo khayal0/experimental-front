@@ -11,7 +11,7 @@ interface ILoginAction {
 }
 
 function* loginUser(action: ILoginAction) {
-    const url = `http://${process.env.REACT_APP_ORIGIN}:5111${PATHS.LOGIN}`;
+    const url = `http://${process.env.REACT_APP_ORIGIN}:5111/api${PATHS.LOGIN}`;
     const config = { headers: {} };
     const role = localStorage.getItem(ELocalStorage.ROLE);
     const continueLogin = role === EUserRole.ADMIN ? PATHS.ADMINPAGE : PATHS.SENDDATA;
