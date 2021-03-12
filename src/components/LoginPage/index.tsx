@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import Block from 'shared/components/Block';
 import Button from 'shared/components/Button';
@@ -16,14 +16,22 @@ interface IProps {
 
 const LoginPage: FC<IProps> = ({ loginRequested }) => {
     const location = useLocation<History>();
-    const unauthorized = location.pathname.includes('unauthorized');
+    const unauthorizedPath = location.pathname.includes('unauthorized');
+    const unauthorized = unauthorizedPath ? 'Unauthorized - Please login as Admin' : null;
 
     // states
     const [loading, setLoading] = useState(false);
+    const [errorText, setErrorText] = useState<string | null>(unauthorized);
     const [credentials, setCredentials] = useState<ICredentials>({
         username: '',
         password: '',
     });
+
+    useEffect(() => {
+        if (false) {
+            setErrorText("Username and password don't match");
+        }
+    }, []);
 
     // handlers
     const handleCredentials = (credential: IInputValue) => {
@@ -49,9 +57,7 @@ const LoginPage: FC<IProps> = ({ loginRequested }) => {
                     <Button loading={loading} onClick={handleContinue} className="login-page__continue">
                         Continue
                     </Button>
-                    {unauthorized && (
-                        <span className="login-page__unauthorized">Unauthorized - Please login as Admin</span>
-                    )}
+                    {errorText && <span className="login-page__unauthorized">{errorText}</span>}
                 </Block>
             </Block>
             <Footer />

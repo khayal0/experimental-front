@@ -10,7 +10,6 @@ Added:
 8. why-did-you-render and analyze installed
 9. connected-react-router to use routing inside sagas
 10. protectedRoutes component
-11. added react-toastify
 
 Need to consider:
 
