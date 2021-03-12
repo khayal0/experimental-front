@@ -15,10 +15,10 @@ export const routes: JSX.Element = (
     <Suspense fallback={<Loader />}>
         <Switch>
             <Route path={PATHS.LOGIN} component={LoginPage} />
-            <ProtectedRoute path={PATHS.ADMINPAGE} component={AdminPage} />
             <Route path={PATHS.SENDDATA} component={SendDataPage} />
             <Route path={PATHS.DATAGRID} component={DataGridPage} />
             <Route path={PATHS.SENDDATA} component={SendDataPage} />
+            <ProtectedRoute exact path={PATHS.ADMINPAGE} component={AdminPage} />
             <Route path={PATHS.USERTABLE} component={UserTable} />
             <Redirect exact from={PATHS.ROOT} to={PATHS.LOGIN} />
             <Route path="/*" render={() => <NotFound />} />

@@ -36,3 +36,8 @@ export enum EUserRole {
     ADMIN = 'admin',
     MODERTOR = 'moderator',
 }
+
+export enum ELocalStorage {
+    TOKEN = 'token',
+    ROLE = 'role',
+}

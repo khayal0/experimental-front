@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { PATHS } from 'routes/paths';
 import Block from 'shared/components/Block';
 import Button from 'shared/components/Button';
 import Footer from 'shared/components/Footer';
@@ -21,7 +23,7 @@ const AdminPage = () => {
                         Download Summary
                     </Button>
                     <Button className="admin-page__continue" loading={false} onClick={() => {}}>
-                        Edit parameters
+                        <Link to={PATHS.DATAGRID}>Edit parameters</Link>
                     </Button>
                 </Block>
             </Block>
