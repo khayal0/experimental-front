@@ -145,17 +145,16 @@ const DataGrid = () => {
                 </Block> */}
 
             <Block className="data-grid__inputs-wrapper">
-                <Button className="data-grid__continue" loading={false} onClick={() => {}}>
-                    <Link to={PATHS.ADMINPAGE}>Back</Link>
-                </Button>
-                {/* <Button className="data-grid__continue" loading={false} onClick={() => {}}>
+                <Link className="lib-black-button" to={PATHS.ADMINPAGE}>
+                    Back
+                </Link>
+                {/* <Button className="lib-black-button" loading={false} onClick={() => {}}>
                     Refresh
                 </Button> */}
-                <Button className="data-grid__continue" loading={false} onClick={() => {}}>
+                <Button className="lib-black-button" loading={false} onClick={() => {}}>
                     Save
                 </Button>
             </Block>
-            <div className="ghost-element"></div>
             <Block className="data-grid__table">
                 <ReactDataGrid
                     rows={rows}

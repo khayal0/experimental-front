@@ -4,3 +4,29 @@ body {
     height: 100vh;
     font-family: 'Inter', sans-serif;
 }
+
+.lib-black-button {
+    color: $white;
+    margin: rem(10px) 0px;
+    height: rem(40px);
+    width: 100%;
+    background: $black;
+    border: 1px solid $black;
+    border-radius: rem(5px);
+    transition: all 0.2s ease 0s;
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: inherit;
+    &:hover,
+    &:hover:visited {
+        background: $white;
+        color: $black !important;
+    }
+    &:visited {
+        color: $white;
+    }
+
+    &--loading {
+        background: $white;
+    }
+}
