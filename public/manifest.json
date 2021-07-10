@@ -8,7 +8,7 @@
             "type": "image/x-icon"
         },
         {
-            "src": "controlPanel.png",
+            "src": "desktopIcon.png",
             "type": "image/png",
             "sizes": "512x512"
         }

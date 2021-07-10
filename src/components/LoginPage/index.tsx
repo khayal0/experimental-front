@@ -9,6 +9,7 @@ import { loginRequested } from './ducks/actions';
 
 import './index.scss';
 import { useLocation } from 'react-router';
+// import Loading from 'shared/components/Loader';
 
 interface IProps {
     loginRequested: typeof loginRequested;
@@ -17,7 +18,7 @@ interface IProps {
 const LoginPage: FC<IProps> = ({ loginRequested }) => {
     const location = useLocation<History>();
     const unauthorizedPath = location.pathname.includes('unauthorized');
-    const unauthorized = unauthorizedPath ? 'Unauthorized - Please login as Admin' : null;
+    const unauthorized = unauthorizedPath ? 'Please login with administrator privileges and try again' : null;
 
     // states
     const [loading, setLoading] = useState(false);
@@ -49,7 +50,7 @@ const LoginPage: FC<IProps> = ({ loginRequested }) => {
             <Block className="login-page">
                 <Block className="login-page__title">
                     <span>Log in to </span>
-                    <span>E.B.Solutions</span>
+                    <span>Experimental</span>
                 </Block>
                 <Block className="login-page__inputs-wrapper">
                     <InputText onChange={handleCredentials} name="username" type="text" placeholder="username" />

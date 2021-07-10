@@ -6,13 +6,12 @@
     color: $blackLight;
     font-size: 4rem;
     width: 100%;
-    button {
-        color: $sea;
+    &__button {
         height: rem(60px);
         width: rem(248px);
         margin: rem(64px) 0px;
         background: $white;
-        border: 1px solid $sea;
+        border: 1px solid $blackLight;
         border-radius: rem(5px);
         transition: all 0.2s ease 0s;
         font-size: 1.3rem;

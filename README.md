@@ -1,2 +1,2 @@
-Control Panel Boilerplate
+Experimental
 See changelog.md

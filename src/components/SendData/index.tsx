@@ -13,7 +13,6 @@ import './index.scss';
 
 const SendData = () => {
     const [loading, setLoading] = useState<boolean>(false);
-    // const [utilities, setUtilities] = useState<IUtilities>();
     const [selectedSite, setSelectedSite] = useState<any>(null);
     const [startDate, setStartDate] = useState(new Date());
     const options = [
@@ -21,6 +20,7 @@ const SendData = () => {
         { value: 'haifa', label: 'Haifa' },
         { value: 'netanya', label: 'Netanya' },
         { value: 'istanbul', label: 'Istanbul' },
+        { value: 'lachin', label: 'Lachin' },
     ];
 
     // handlers

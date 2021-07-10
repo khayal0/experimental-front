@@ -21,11 +21,11 @@ const columns = [
     { key: 'june', width: 120, name: 'june', editor: TextEditor },
 ];
 
-interface IGridState {
-    fromRow: any;
-    toRow: any;
-    updated: any;
-}
+// interface IGridState {
+//     fromRow: any;
+//     toRow: any;
+//     updated: any;
+// }
 
 const DataGrid = () => {
     const [rows, setRows] = useState(initialRows);
@@ -46,9 +46,6 @@ const DataGrid = () => {
                 <Link className="lib-black-button" to={PATHS.ADMINPAGE}>
                     Back
                 </Link>
-                {/* <Button className="lib-black-button" loading={false} onClick={() => {}}>
-                    Refresh
-                </Button> */}
                 <Button className="lib-black-button" loading={false} onClick={() => {}}>
                     Save
                 </Button>

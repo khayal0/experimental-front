@@ -17,7 +17,6 @@ export const routes: JSX.Element = (
             <Route path={PATHS.LOGIN} component={LoginPage} />
             <Route path={PATHS.SENDDATA} component={SendDataPage} />
             <Route path={PATHS.DATAGRID} component={EditParametersPage} />
-            <Route path={PATHS.SENDDATA} component={SendDataPage} />
             <ProtectedRoute exact path={PATHS.ADMINPAGE} component={AdminPage} />
             <Route path={PATHS.USERTABLE} component={UserTable} />
             <Redirect exact from={PATHS.ROOT} to={PATHS.LOGIN} />

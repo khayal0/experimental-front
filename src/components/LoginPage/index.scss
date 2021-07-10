@@ -14,10 +14,11 @@
     &__title {
         font-size: rem(48px);
         font-weight: 800;
+        color: $black;
         text-align: center;
-        // span:last-child {
-        //     // color: #44c1f7;
-        // }
+        span:last-child {
+            color: #44c1f7;
+        }
     }
     &__continue {
         @include text($color: $white, $font: inherit, $size: rem(14.4px), $weight: 600);

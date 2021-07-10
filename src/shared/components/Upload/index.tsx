@@ -1,8 +1,6 @@
 import React, { FC, ChangeEvent, useState, useRef, useEffect } from 'react';
-// import { connect } from 'react-redux';
 import Block from '../Block';
 import Button from '../Button';
-// import { uploadStarted } from './ducks/actions';
 import { ISelectedFile, EDrag } from 'shared/models';
 import { UploadIcon } from './icons';
 
@@ -32,7 +30,6 @@ const Upload: FC<IProps> = ({ handleImageSelect, multiple }) => {
     const handleUpload = () => {
         if (selectedFile?.raw) {
             handleImageSelect(selectedFile);
-            // uploadStarted(formData);
             // console.log(' Success : file added to local state');
         } else {
             console.log('Error : No Selected Files');
@@ -112,10 +109,6 @@ const Upload: FC<IProps> = ({ handleImageSelect, multiple }) => {
                     </Button>
                 </Block>
             ) : null}
-
-            {/* <Button onClick={handleUpload} className="approved">
-                Upload
-            </Button> */}
         </Block>
     );
 };
